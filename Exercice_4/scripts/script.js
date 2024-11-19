@@ -1,0 +1,1 @@
+// Savoir si un mot de passe contient bien au moins 2 majuscules, 1 minuscule, 2 chiffres et un signe & ou # ou @, avec une longueur est de 8.

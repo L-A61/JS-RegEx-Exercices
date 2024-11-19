@@ -1,0 +1,1 @@
+// Savoir si une chaîne de caractères est une couleur hexadécimale ou non.
