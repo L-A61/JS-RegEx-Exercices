@@ -1,9 +1,16 @@
-// Savoir si une chaîne de caractères est un numéro de téléphone au format : 06 52 32 04 78 ou +33652320478
+// Savoir si une chaîne de caractères est un numéro de téléphone au format : 06 52 32 04 78 ou +33 6 52 32 04 78
 
-let input = prompt("Saisir un numéro de tel")
+let input = document.getElementById("inputNb");
+let inputBtn = document.getElementById("inputBtn")
+let inputResult = document.getElementById("inputResult")
 
-if (/^[0-9]{10,10}$/.test(input)) { // TODO: faire un regex qui saisis le deuxième format
-    alert("Numéro valide")
-} else {
-    alert("Numéro non valide")
-}
+inputBtn.addEventListener("click", function() {
+    if (/^(\s?[0-9]){10,10}$/.test(input.value)) {
+        inputResult.innerText="Numéro saisis: " + input.value + "\nNuméro valide!"
+    } else if (/^[+]?[3]{2,}(\s?[0-9]){9,9}$/.test(input.value)) {
+        inputResult.innerText="Numéro saisis: " + input.value + "\nNuméro valide!"
+    } else {
+        inputResult.innerText="Numéro saisis: " + input.value + "\nNuméro non valide!"
+    }
+})
+
